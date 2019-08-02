@@ -1,0 +1,76 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+lane :dev do
+    build_app(
+       scheme: "JenkinsDemo",
+       export_method:"development",
+       configuration:"Debug",
+       output_name:"dev.ipa",
+       workspace: "JenkinsDemo.xcworkspace")
+       pgyer(api_key: "a5997105d25880cb56fe41d37bc44a1e", user_key:"8af32dbce81546db5ce510d95e5841a9")
+  end
+
+lane :adhoc do
+    build_app(
+       scheme: "JenkinsDemo",
+       export_method:"ad-hoc",
+       configuration:"AdHoc",
+       workspace: "JenkinsDemo.xcworkspace",
+        output_name:"adhoc.ipa")
+       pgyer(api_key: "a5997105d25880cb56fe41d37bc44a1e", user_key:"8af32dbce81546db5ce510d95e5841a9")
+end
+
+lane :store do
+    build_app(
+       scheme: "JenkinsDemo",
+       export_method:"app-store",
+       configuration:"Release",
+       workspace: "JenkinsDemo.xcworkspace",
+        output_name:"store.ipa")
+       pgyer(api_key: "a5997105d25880cb56fe41d37bc44a1e", user_key:"8af32dbce81546db5ce510d95e5841a9")
+end
+
+lane :betaDev do
+    build_app(
+       scheme: "T11_Beta",
+       export_method:"development",
+       configuration:"Debug",
+       output_name:"betaDev.ipa",
+       workspace: "T11_iOS.xcworkspace")
+       pgyer(api_key: "a5997105d25880cb56fe41d37bc44a1e", user_key:"8af32dbce81546db5ce510d95e5841a9")
+  end
+
+lane :betaAdhoc do
+    build_app(
+       scheme: "T11_Beta",
+       export_method:"ad-hoc",
+       configuration:"AdHoc",
+       workspace: "T11_iOS.xcworkspace",
+        output_name:"betaAdhoc.ipa")
+       pgyer(api_key: "a5997105d25880cb56fe41d37bc44a1e", user_key:"8af32dbce81546db5ce510d95e5841a9")
+end
+
+lane :wxdev do
+    build_app(
+       scheme: "T11_WxDev",
+       export_method:"development",
+       configuration:"Debug",
+       output_name:"wxDev.ipa",
+       workspace: "T11_iOS.xcworkspace")
+       pgyer(api_key: "a5997105d25880cb56fe41d37bc44a1e", user_key:"8af32dbce81546db5ce510d95e5841a9")
+  end
