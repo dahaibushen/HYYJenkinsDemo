@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5B9CE600765CC317C3DC4DD733F6309F"
-               BuildableName = "libPods-JenkinsDemo.a"
-               BlueprintName = "Pods-JenkinsDemo"
+               BlueprintIdentifier = "30C5A80FAAEB86D6391BE3E7720A9F83"
+               BuildableName = "libSDCycleScrollView.a"
+               BlueprintName = "SDCycleScrollView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
